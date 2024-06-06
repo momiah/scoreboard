@@ -83,7 +83,10 @@ const badmintonGames = [
 const Scoreboard = () => {
   return (
     <Container>
-      <Title>Badminton Scoreboard</Title>
+      <AddGame>
+        <Text>Add Game</Text>
+      </AddGame>
+
       <FlatList
         data={badmintonGames}
         keyExtractor={(item) => item.date}
@@ -121,11 +124,17 @@ const Container = styled.View({
   backgroundColor: "#fff",
 });
 
-const Title = styled.Text({
+const AddGame = styled.TouchableOpacity({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
   fontSize: 24,
   fontWeight: "bold",
-  marginBottom: 16,
-  textAlign: "center",
+  marginBottom: 15,
+  marginTop: 15,
+  padding: 10,
+  backgroundColor: "#BBDCFF",
+  border: "1px solid #ccc",
 });
 
 const GameContainer = styled.View({
